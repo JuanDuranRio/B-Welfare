@@ -1,0 +1,70 @@
+<body>
+    <header>
+        <div class="flex justify-between">
+
+            <div class="p-2">
+                <img src="/logo.jpg" alt="logo-photo" class="w-[256px] h-[64px]">
+            </div>
+
+            <div class="p-2 mr-2">
+                <img src="/profile-user.png" alt="user-photo" class="w-[64px] h-[64px]" (click)="menuIsVisible = !menuIsVisible">
+                @if (menuIsVisible) {
+                    <div class="absolute z-10 p-4 mt-2 bg-orange-400 rounded-lg right-4">
+                        <ul class="cursor-pointer">
+                            <li>
+                                <a target="_blank" (click)=moverAPerfil()>Perfil</a>
+                            </li>
+                            <li>
+                                <a target="_blank" (click)=moverAPlanes()>Planes</a>
+                            </li>
+                            <li>
+                                <a target="_blank" (click)=moverAMainPage()>Inicio</a>
+                            </li>
+                        </ul>
+                    </div>
+                }
+            </div>
+
+    </div>  
+
+    </header>
+
+    <main>
+        <div class="flex justify-between max-w-[1160px] my-4 mx-auto pl-10">
+            <button mat-raised-button (click)='saveResourceType = "fisico"' class="bg-[#FF9933]">
+                Fisico
+            </button>
+            <button mat-raised-button (click)='saveResourceType = "psicologico"'>
+                Psicologico
+            </button>
+            <button mat-raised-button (click)='saveResourceType = "espiritual"'>
+                Espiritual
+            </button>
+        </div>
+        <div class="grid grid-cols-3 gap-6">
+            @for (box of boxes; track box.id) {
+
+                <mat-card class="w-[400px] mx-auto my-3" appearance="outlined" >
+                    @if (saveResourceType == "fisico") {
+                        <img mat-card-image class="bg-cover" src="https://material.angular.io/assets/img/examples/shiba1.jpg"/>
+                    } @else if (saveResourceType == "psicologico") {
+                        <img mat-card-image class="bg-cover" src="https://i.pinimg.com/236x/bf/f5/8f/bff58fb602eb6959873ba78b0af324a0.jpg"/>
+                    } @else {
+                        <img mat-card-image class="bg-cover" src="https://i.pinimg.com/736x/1c/5d/45/1c5d45a9c08ce419addfd557757fc58c.jpg"/>
+                    }
+                    
+                    <div class="bg-[#CBF3F0]">
+                        <mat-card-content class="">{{ box.name + ' ' + box.id }}</mat-card-content>
+                        <button mat-button class="">Tomar encuesta</button>
+                    </div>
+                    
+                </mat-card>
+                
+                
+            }
+        </div>
+    </main>
+    
+</body>
+
+

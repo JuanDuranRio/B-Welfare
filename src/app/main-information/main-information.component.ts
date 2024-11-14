@@ -14,4 +14,8 @@ export class MainInformationComponent {
   navegarALogin() {
     this.router.navigate(['login']);
   }
+
+  navegarARecursos() {
+    this.router.navigate(['resources-natural']);
+  }
 }
