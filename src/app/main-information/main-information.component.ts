@@ -18,4 +18,8 @@ export class MainInformationComponent {
   navegarARecursos() {
     this.router.navigate(['resources-natural']);
   }
+
+  navegarAdminEmployees() {
+    this.router.navigate(['admin-employees']);
+  }
 }
