@@ -3,13 +3,13 @@
         <div class="flex justify-between">
 
             <div class="p-2">
-                <img src="/logo.jpg" alt="logo-photo" class="w-[256px] h-[64px]">
+                <img src="/B.svg" alt="logo-photo" class="w-[64px] h-[64px] cursor-pointer bg-black" (click)="moverAMainPage()">
             </div>
 
-            <div class="p-2 mr-2">
-                <img src="/profile-user.png" alt="user-photo" class="w-[64px] h-[64px]" (click)="menuIsVisible = !menuIsVisible">
+            <div class="p-2 my-auto mr-2">
+                <img src="/profile-user.png" alt="user-photo" class="w-[48px] h-[48px] my-auto cursor-pointer" (click)="menuIsVisible = !menuIsVisible">
                 @if (menuIsVisible) {
-                    <div class="absolute z-10 p-4 mt-2 bg-orange-400 rounded-lg right-4">
+                    <div class="absolute z-10 p-4 bg-orange-400 rounded-lg right-4">
                         <ul class="cursor-pointer">
                             <li>
                                 <a target="_blank" (click)=moverAPerfil()>Perfil</a>
@@ -30,14 +30,14 @@
     </header>
 
     <main>
-        <div class="flex justify-between max-w-[1160px] my-4 mx-auto pl-10">
-            <button mat-raised-button (click)='saveResourceType = "fisico"' class="bg-[#FF9933]">
+        <div class="grid grid-cols-3 mb-4 mx-auto p-4 bg-[#43B3AE]">
+            <button mat-raised-button (click)='saveResourceType = "fisico"' class="bg-[#FF9933] w-[30%] mx-auto">
                 Fisico
             </button>
-            <button mat-raised-button (click)='saveResourceType = "psicologico"'>
+            <button mat-raised-button (click)='saveResourceType = "psicologico"' class="w-[30%] mx-auto">
                 Psicologico
             </button>
-            <button mat-raised-button (click)='saveResourceType = "espiritual"'>
+            <button mat-raised-button (click)='saveResourceType = "espiritual"' class="w-[30%] mx-auto">
                 Espiritual
             </button>
         </div>
@@ -46,14 +46,14 @@
 
                 <mat-card class="w-[400px] mx-auto my-3" appearance="outlined" >
                     @if (saveResourceType == "fisico") {
-                        <img mat-card-image class="bg-cover" src="https://material.angular.io/assets/img/examples/shiba1.jpg"/>
+                        <img mat-card-image class="h-[400px]" src="https://i.pinimg.com/236x/45/2d/01/452d01db3062252ca888278d3b06b6cf.jpg"/>
                     } @else if (saveResourceType == "psicologico") {
-                        <img mat-card-image class="bg-cover" src="https://i.pinimg.com/236x/bf/f5/8f/bff58fb602eb6959873ba78b0af324a0.jpg"/>
+                        <img mat-card-image class="h-[400px]" src="https://i.pinimg.com/236x/bf/f5/8f/bff58fb602eb6959873ba78b0af324a0.jpg"/>
                     } @else {
-                        <img mat-card-image class="bg-cover" src="https://i.pinimg.com/736x/1c/5d/45/1c5d45a9c08ce419addfd557757fc58c.jpg"/>
+                        <img mat-card-image class="h-[400px]" src="https://i.pinimg.com/736x/1c/5d/45/1c5d45a9c08ce419addfd557757fc58c.jpg"/>
                     }
                     
-                    <div class="bg-[#CBF3F0]">
+                    <div class="bg-[#CBF3F0] grid grid-cols-1">
                         <mat-card-content class="">{{ box.name + ' ' + box.id }}</mat-card-content>
                         <button mat-button class="">Tomar encuesta</button>
                     </div>
