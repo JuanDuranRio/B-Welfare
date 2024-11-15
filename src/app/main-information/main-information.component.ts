@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './main-information.component.html',
   styleUrl: './main-information.component.css',
 })
+
 export class MainInformationComponent {
   constructor(private router: Router) {}
 
@@ -19,7 +20,19 @@ export class MainInformationComponent {
     this.router.navigate(['resources-natural']);
   }
 
+  navegarOffersCompany() {
+    this.router.navigate(['offer-company']);
+  }
+
   navegarAdminEmployees() {
     this.router.navigate(['admin-employees']);
+  }
+
+  navegarOffersWorkers() {
+    this.router.navigate(['offer-workers']);
+  }
+
+  navegarPlanPlus() {
+    this.router.navigate(['plan-plus']);
   }
 }
