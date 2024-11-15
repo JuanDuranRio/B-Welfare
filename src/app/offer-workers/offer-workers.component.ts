@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,11 +8,10 @@ import { MatExpansionModule } from '@angular/material/expansion';
 @Component({
   selector: 'app-offer-workers',
   standalone: true,
-  imports: [CommonModule, 
+  imports: [
+    CommonModule, 
     MatButtonModule, 
     MatIconModule,
-    BrowserModule,
-    BrowserAnimationsModule,
     MatCardModule,
     MatExpansionModule
   ],
