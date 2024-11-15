@@ -7,15 +7,30 @@
             <h1 class="">Registrarme</h1>
             
             <form class="border-2 border-yellow-800 mx-5 my-5" action="">
-                <input type="text" placeholder="Nombre Completo">
-                <input type="email" placeholder="Correo">
-                <input type="password" placeholder="Contraseña">
-                <button type="submit">Registrarme</button>
+                <input class="my-10" type="text" placeholder="Nombre Completo">
+                <input class="my-10" type="email" placeholder="Nombre Completo">
+                
+                
+                <mat-form-field class="border-2 border-orange-600">
+                    <input class="border-2 border-orange-600" [type]="hide() ? 'password' : 'text'" placeholder="Correo">
+                    <button type="button" (click)="clickEvent($event)"
+                    [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide()" >Registrarme</button>
+                </mat-form-field>
+
+                <button type="submit">enviar</button>
+                
             </form>
+            
             
         </div>
         
         <p>Registrarme como usuario</p>
     </div>
     <br>
+
+    
+      
 </body>
+
+  
