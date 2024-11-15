@@ -1,0 +1,4 @@
+/* Ajustes generales para el diseño */
+button {
+  transition: background-color 0.3s ease;
+}

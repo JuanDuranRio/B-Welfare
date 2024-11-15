@@ -1,0 +1,22 @@
+/* job-details.component.css */
+.mat-card {
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.mat-accordion {
+  background-color: #38b2ac;
+}
+
+.mat-expansion-panel-header {
+  background-color: #319795;
+  color: white;
+}
+
+.mat-panel-title {
+  font-weight: bold;
+}
+
+.mat-icon-button {
+  color: white;
+}

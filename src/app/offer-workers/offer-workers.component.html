@@ -1,7 +1,43 @@
-<header class="bg-orange-500 h-24 w-full">
-
-</header>
-
-<body>
-    
-</body>
+<div class="w-full max-w-2xl mx-auto bg-teal-500 p-6 rounded-md shadow-md">
+    <mat-card class="bg-teal-400">
+      <mat-card-header>
+        <mat-card-title class="text-white text-lg font-bold">
+          Desarrollador de Software - Bancolombia
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="grid grid-cols-2 gap-4 text-white">
+          <div>
+            <p><strong>Sueldo:</strong> $650000</p>
+            <p><strong>Jornada:</strong> Lunes - Viernes</p>
+            <p><strong>Intensidad Horaria:</strong> 10 Horas (6:00 - 16:00)</p>
+            <p><strong>Modalidad:</strong> Presencial</p>
+          </div>
+          <div>
+            <p><strong>Moneda:</strong> Dólares</p>
+            <p><strong>Ciudad:</strong> Bogotá D.C., Colombia</p>
+            <p><strong>Contacto:</strong> (+57) 3227949653</p>
+            <p><strong>Email:</strong> bancobogotagmail.com</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="flex justify-end">
+        <button mat-icon-button color="accent">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  
+    <!-- Botones desplegables debajo -->
+    <div class="space-y-4 mt-6">
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let item of items">
+          <mat-expansion-panel-header>
+            <mat-panel-title> {{ item.title }} </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>{{ item.content }}</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+  
