@@ -1,1 +1,25 @@
-<p>offer-company works!</p>
+<div class="grid grid-cols-3 gap-4 p-4">
+    <div
+      *ngFor="let persona of personas"
+      class="bg-white shadow-lg rounded-lg p-4 flex flex-col items-center justify-center"
+    >
+      <img
+        [src]="persona.imagen"
+        alt="{{ persona.nombre }}"
+        class="w-24 h-24 rounded-full object-cover mb-4"
+      />
+      <div class="text-center">
+        <h3 class="text-lg font-semibold">{{ persona.nombre }}</h3>
+        <p class="text-sm text-gray-500">{{ persona.rol }}</p>
+      </div>
+      <button mat-button [matMenuTriggerFor]="menu" class="mt-2">
+        Opciones
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Opción 1</button>
+        <button mat-menu-item>Opción 2</button>
+        <button mat-menu-item>Opción 3</button>
+      </mat-menu>
+    </div>
+  </div>
+  

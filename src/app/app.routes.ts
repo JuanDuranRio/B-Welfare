@@ -7,6 +7,10 @@ import { NaturalPersonResourcesComponent } from './natural-person-resources/natu
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CompanyResourcesComponent } from './company-resources/company-resources.component';
 import { CompanyProfileComponent } from './company-profile/company-profile.component';
+import { AdminEmployeesComponent } from './admin-employees/admin-employees.component';
+import { OfferCompanyComponent } from './offer-company/offer-company.component';
+import { OfferWorkersComponent } from './offer-workers/offer-workers.component';
+import { PlanPlusComponent } from './plan-plus/plan-plus.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent },
@@ -16,7 +20,10 @@ export const routes: Routes = [
     { path: 'user-profile', component: UserProfileComponent },
     { path: 'resources-company', component: CompanyResourcesComponent },
     { path: 'company-profile', component: CompanyProfileComponent },
-    // Otras rutas...
+    { path: 'admin-employees', component: AdminEmployeesComponent},
+    { path: 'offer-company', component: OfferCompanyComponent},
+    { path: 'offer-workers', component: OfferWorkersComponent},
+    { path: 'plan-plus', component: PlanPlusComponent},
 ];
   @NgModule({
     imports: [RouterModule.forRoot(routes)],
